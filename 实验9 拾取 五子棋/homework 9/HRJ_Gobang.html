@@ -1,0 +1,38 @@
+<!DOCTYPE html>	<!--表示文档类型为HTML文档-->
+<html>
+	<head><!--文档头部-->
+		<!--使用UTF-8字符编码，无此句在某些浏览器会出现乱码-->
+		<meta charset = "utf-8">
+		<!--文档标题，会显示在网页标题栏-->
+		<title>HRJ 2019040801012</title>
+	</head>
+	
+	<body>
+		<canvas id="webgl" width="600" height="600">
+		对不起，你的浏览器不支持HTML5的canvas元素！
+		</canvas>
+		<p>使用上下左右方向键以控制观察角度</p>
+
+		
+		<!--顶点Shader程序-->
+		<script id="vertex-shader" type="x-shader/x-vertex">
+		attribute vec3 a_Position;	
+		uniform mat4 u_MVPMatrix;	
+		void main(){
+			gl_Position = u_MVPMatrix * vec4(a_Position, 1.0);	
+		}
+		</script>
+
+		<script id="fragment-shader" type="x-shader/x-fragment">
+		precision mediump float;	
+		uniform vec4 u_Color;	 	
+		void main(){
+			gl_FragColor = u_Color;
+		}
+		</script>
+		<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+		<script type="text/javascript" src="./Common/initShaders.js"></script>
+		<script type="text/javascript" src="./Common/MV.js"></script>
+		<script type="text/javascript" src="HRJ_Gobang.js"></script>
+	</body>
+</html>
