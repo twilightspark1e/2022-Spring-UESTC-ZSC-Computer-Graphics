@@ -1,0 +1,1 @@
+基础程序旋转效果不对，顶点shader里面pos.x的计算公式错了；指导书第10步未实现：将onresize函数中的代码也放置一份在main函数中，替换掉原来视口设置的代码，实现在初始化时即让canvas自动充满整个页面客户区；当窗口宽度大于高度时旋转正方形未居中，gl.viewport((canvas.width - canvan.height)/2,0,canvas.height,canvas.height)第二个canvas拼错了
