@@ -1,0 +1,1 @@
+NumVertices值有问题；divideTetra函数中的第3-4个divideTetra参数有问题
